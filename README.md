@@ -4,6 +4,8 @@
 
 [English](#english) | [中文](#中文)
 
+![Composer dock balance chip](screenshots/composer-dock.png)
+
 > A live DeepSeek account-balance chip in the DeepSeek Harness (DSH) composer dock.
 > 在 DeepSeek Harness 输入框下方实时显示 DeepSeek 账户余额。
 
