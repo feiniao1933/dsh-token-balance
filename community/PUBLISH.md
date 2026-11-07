@@ -1,5 +1,12 @@
 # 发布状态 / Publishing status
 
+## 已发布（2026-11-08）
+
+- **Open Plugin Market（dshopen.org）**：已收录，插件页 https://dshopen.org/zh/plugins/dsh-token-balance/ ，固定提交 `41933b791336074bc39db12c5ddc9b3f481e6225`，版本 1.0.1。
+- **awesome-dsh-plugin（dsh-market 目录）**：PR https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/13109 ，单文件投稿，CI 进行中。仓库创建于 2026-11-07T01:47Z，提交时尚未满 24 小时；按仓库 CI 说明，年龄门槛会自动重跑并通过，不需要重提。
+
+以下为原始发布清单，保留作记录。
+
 ## 已完成
 
 - 公开源码仓库：https://github.com/feiniao1933/dsh-token-balance（`main` 已推送）
