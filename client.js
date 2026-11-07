@@ -43,13 +43,12 @@ window.__ModuleLoader__.load({
 
     const STYLE_ID = 'dsh-token-balance/styles'
     const CSS = `
-.dsh-tb-chip{box-sizing:border-box;display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;border:none;border-radius:999px;background:transparent;color:var(--dsw-alias-label-tertiary);font-family:Inter,var(--dsw-font-family);font-size:12px;line-height:18px;font-variant-numeric:tabular-nums;cursor:pointer;transition:background-color .1s,color .1s}
+.dsh-tb-chip{box-sizing:border-box;display:inline-flex;align-items:center;gap:6px;max-width:100%;min-width:0;padding:1px 8px;border:none;border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-tertiary);font:inherit;font-size:calc(var(--dsh-content-font-size-secondary,13px) - 1px);font-variant-numeric:tabular-nums;line-height:calc(20px + var(--dsh-content-font-delta-secondary,0px));white-space:nowrap;cursor:pointer}
 @media (hover:hover){.dsh-tb-chip:hover{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-secondary)}}
 .dsh-tb-chip:focus-visible{outline:var(--dsw-focus-ring-width) solid var(--dsw-focus-ring-color,var(--dsw-alias-state-business-primary));outline-offset:2px}
 .dsh-tb-chip[data-state=error]{color:var(--dsw-alias-state-error-primary)}
 .dsh-tb-icon{display:grid;place-items:center;width:14px;height:14px;flex:none}
-.dsh-tb-value{font-weight:500;color:var(--dsw-alias-label-secondary);white-space:nowrap}
-.dsh-tb-chip[data-state=error] .dsh-tb-value{color:inherit}
+.dsh-tb-value{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dsh-tb-dot{width:5px;height:5px;border-radius:50%;background:var(--dsw-alias-state-warn-primary);flex:none}
 `
 
