@@ -1,3 +1,5 @@
+<p align="center"><img src="icon.svg" width="80" height="80" alt="dsh-token-balance icon"></p>
+
 # dsh-token-balance
 
 [English](#english) | [中文](#中文)

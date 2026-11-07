@@ -19,7 +19,7 @@ awesome-dsh-plugin 的 CI 会检查这个 topic。
 
 ## 2. 提交 Open Plugin Market（dshopen.org）
 
-打开 [SUBMIT-LINKS.md](SUBMIT-LINKS.md) 里的收录申请链接（已预填标题、正文和固定提交 SHA），附 1–2 张截图后提交。
+打开本地生成的 `community/SUBMIT-LINKS.md`（该文件不随仓库发布）里的收录申请链接（已预填标题、正文和固定提交 SHA），附 1–2 张截图后提交。
 
 dshopen 支持固定 GitHub 提交，不需要先发布 npm。
 
