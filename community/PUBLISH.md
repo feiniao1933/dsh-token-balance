@@ -1,85 +1,55 @@
-# 发布清单 / Publishing checklist
+# 发布状态 / Publishing status
 
-插件已经按公开发布的要求准备好（包名、许可证、`repository`、`engines.dsh`、README、构建产物）。剩下的是需要账号的操作。
+## 已完成
 
-> 目标仓库：`feiniao1933/dsh-token-balance`（GitHub 用户名来自本机已有的 GitHub SSH 身份）。
-> npm 包名：`dsh-token-balance`（已确认未被占用）。
-> 许可证：MIT。
+- 公开源码仓库：https://github.com/feiniao1933/dsh-token-balance（`main` 已推送）
+- 发布用包：`dsh-token-balance@1.0.1`，MIT，`repository` / `engines.dsh` / `dsh.bundle.patch` 齐全
+- `npm pack` 产物：`dsh-token-balance-1.0.1.tgz`（已在临时目录安装验证）
+- 社区提交材料：`community/dshopen-issue.md`、`community/awesome-dsh-plugin.yml`
 
-## 1. 创建 GitHub 仓库并推送
+## 1. 给仓库加 topic
 
-仓库目前还不存在。用浏览器打开：
+打开 https://github.com/feiniao1933/dsh-token-balance ，点 **About** 旁的齿轮，在 **Topics** 加：
 
-https://github.com/new?name=dsh-token-balance
-
-- Owner: `feiniao1933`
-- Repository name: `dsh-token-balance`
-- Public
-- 不要勾选 README / .gitignore / license（本地已有）
-
-然后在本目录执行：
-
-```sh
-git push -u origin main
+```text
+dsh-plugin
 ```
 
-（本目录已经初始化并提交，`origin` 已配置为 `git@github.com:feiniao1933/dsh-token-balance.git`；本机 GitHub SSH 身份已验证为 `feiniao1933`。）
+awesome-dsh-plugin 的 CI 会检查这个 topic。
 
-推送后到仓库 **About** 里加上 topic `dsh-plugin`（awesome-dsh-plugin 的 CI 会检查）。
+## 2. 提交 Open Plugin Market（dshopen.org）
 
-## 2. 发布 npm 包
+打开 [SUBMIT-LINKS.md](SUBMIT-LINKS.md) 里的收录申请链接（已预填标题、正文和固定提交 SHA），附 1–2 张截图后提交。
 
-先登录（只需一次）：
+dshopen 支持固定 GitHub 提交，不需要先发布 npm。
 
-```sh
-npm login
-```
+## 3. 提交 awesome-dsh-plugin（dsh-market 目录）
 
-确认身份后发布：
-
-```sh
-npm publish --access public
-```
-
-验证：
-
-```sh
-npm view dsh-token-balance version
-```
-
-> 如果 `npm login` 需要浏览器或一次性密码，请在你自己的终端里完成，然后告诉我继续。
-> 也可以先不发布 npm：dshopen 支持固定的 GitHub 提交，awesome-dsh-plugin 支持 GitHub Release 的 tarball；但 npm 是最省事的安装来源。
-
-## 3. 提交到 Open Plugin Market（dshopen.org）
-
-打开：
-
-https://github.com/polang233/dsh-plugin-index/issues/new?template=plugin-add.yml
-
-标题和正文直接用 [`dshopen-issue.md`](dshopen-issue.md)，附 1–2 张真实截图（可选但推荐）。
-
-## 4. 提交到 awesome-dsh-plugin（dsh-market 的目录）
-
-给 https://github.com/awesome-dsh-plugin/awesome-dsh-plugin 开一个 PR，只新增一个文件：
+给 https://github.com/awesome-dsh-plugin/awesome-dsh-plugin 开 PR，只新增：
 
 ```text
 data/plugins/feiniao1933__dsh-token-balance.yml
 ```
 
-内容为 [`awesome-dsh-plugin.yml`](awesome-dsh-plugin.yml)。
+内容为 [awesome-dsh-plugin.yml](awesome-dsh-plugin.yml)。
 
-注意：
+**注意：仓库创建满 1 天后 CI 才会通过**（今天是 2026-11-07，明天再提交）。分类已选 `usage`。
 
-- 仓库需要**创建满 1 天**后 CI 才会通过（刚建的仓库会被自动拒绝）。
-- 分类用 `usage`。
-- 仓库需要 topic `dsh-plugin`。
+## 4. 以后发布 npm（可选）
 
-## 5. 可选：GitHub Release 备份
+登录一次后：
 
-如果暂时不发布 npm，可以把 `npm pack` 生成的 `dsh-token-balance-1.0.1.tgz` 附加到 GitHub Release，并在 awesome-dsh-plugin 的条目里加：
+```sh
+npm login
+npm publish --access public
+```
+
+发布后把 dshopen 的申请从固定提交改为跟踪 npm `latest`，并在本仓库加 npm 徽章。
+
+## 5. 可选：GitHub Release
+
+`npm pack` 生成的 `dsh-token-balance-1.0.1.tgz` 可以附加到 GitHub Release，作为源码安装之外的备选来源；awesome 条目可加：
 
 ```yaml
 tarball: https://github.com/feiniao1933/dsh-token-balance/releases/download/v1.0.1/dsh-token-balance-1.0.1.tgz
 ```
-
-（文件名带版本号时必须钉住 release tag；用 `latest/download/` 时文件名不要带版本。）

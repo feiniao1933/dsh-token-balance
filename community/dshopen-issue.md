@@ -10,9 +10,13 @@
 
 ## 插件地址 / Plugin link
 
+Git 来源（npm 暂未发布）：
+
 ```text
-dsh-token-balance
-https://github.com/feiniao1933/dsh-token-balance
+仓库：https://github.com/feiniao1933/dsh-token-balance
+版本：1.0.1
+提交：<COMMIT_SHA>
+路径：仓库根目录
 ```
 
 ## 简短说明 / Summary
@@ -39,7 +43,5 @@ A live DeepSeek account-balance chip in the DSH composer dock, next to the conte
 Logo: 包内 icon.svg（也通过 ./icon 导出）
 测试版本：DSH 0.2.2-rc.1，macOS
 许可证：MIT
-npm 包名：dsh-token-balance
-仓库：https://github.com/feiniao1933/dsh-token-balance
-安装：dsh plugin --profile web add dsh-token-balance
+安装（固定提交）：dsh plugin --profile web add git+https://github.com/feiniao1933/dsh-token-balance.git#<COMMIT_SHA>
 ```

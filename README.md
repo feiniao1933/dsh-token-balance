@@ -25,11 +25,19 @@
 
 ### Install
 
+The npm release is not published yet. Install from the public Git repository:
+
 ```sh
-dsh plugin --profile web add dsh-token-balance
+dsh plugin --profile web add github:feiniao1933/dsh-token-balance
 ```
 
-Replace `web` with your profile name. Restart or refresh the Web page as your host requires.
+Or pin a commit (recommended for reproducible installs):
+
+```sh
+dsh plugin --profile web add git+https://github.com/feiniao1933/dsh-token-balance.git#<commit>
+```
+
+Replace `web` with your profile name. Once the npm package is published, `dsh plugin --profile web add dsh-token-balance` works too.
 
 ### Configuration
 
@@ -73,11 +81,19 @@ MIT. See [LICENSE](LICENSE).
 
 ### 安装
 
+npm 版本尚未发布。先从公开仓库安装：
+
 ```sh
-dsh plugin --profile web add dsh-token-balance
+dsh plugin --profile web add github:feiniao1933/dsh-token-balance
 ```
 
-把 `web` 换成你的 profile 名称；按宿主要求重启或刷新页面。
+或固定提交（推荐，安装结果可复现）：
+
+```sh
+dsh plugin --profile web add git+https://github.com/feiniao1933/dsh-token-balance.git#<commit>
+```
+
+把 `web` 换成你的 profile 名称；按宿主要求重启或刷新页面。npm 包发布后也可以用 `dsh plugin --profile web add dsh-token-balance`。
 
 ### 配置
 
