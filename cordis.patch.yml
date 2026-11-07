@@ -1,0 +1,7 @@
+# Token balance: a live DeepSeek account-balance chip below the composer.
+# Adjust refreshIntervalMs (5000-3600000) to change how often the page re-reads it.
+- insert:
+    - id: token-balance
+      name: dsh-token-balance
+      config:
+        refreshIntervalMs: 30000

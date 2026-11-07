@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Token balance",
+    "description": "Shows the DeepSeek account balance below the composer, with bonus credit, and refreshes it automatically."
+  }
+}
